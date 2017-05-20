@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">Jugadores</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <div *ngFor="let player of this.playerService.players">
+          <li class="list-group-item">
+            <span class="glyphicon glyphicon-user"></span>
+            {{player}}
+          </li> 
+        </div>
+      </ul>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Nuevo jugador">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button">
+            <span class="glyphicon glyphicon-plus"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <button [disabled]="this.playerService.players.length < 2" type="button" class="btn btn-primary btn-block">¡Empezar a jugar!</button>
+</div>

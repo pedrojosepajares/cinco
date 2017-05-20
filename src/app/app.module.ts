@@ -6,10 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import { DeckService } from './services/deck.service';
+import { PlayerService } from './services/player.service';
+import { PlayerInputComponent } from './shared/player-input/player-input.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PlayerInputComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +20,8 @@ import { DeckService } from './services/deck.service';
     HttpModule
   ],
   providers: [
-    DeckService
+    DeckService,
+    PlayerService
   ],
   bootstrap: [AppComponent]
 })
