@@ -5,6 +5,8 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { DeckService } from './services/deck.service';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -14,7 +16,9 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    DeckService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
