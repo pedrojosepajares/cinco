@@ -8,11 +8,13 @@ import { AppComponent } from './app.component';
 import { DeckService } from './services/deck.service';
 import { PlayerService } from './services/player.service';
 import { PlayerInputComponent } from './shared/player-input/player-input.component';
+import { PlayZoneComponent } from './shared/play-zone/play-zone.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PlayerInputComponent
+    PlayerInputComponent,
+    PlayZoneComponent
   ],
   imports: [
     BrowserModule,
