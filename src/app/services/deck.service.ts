@@ -15,8 +15,12 @@ export class Card{
 
 @Injectable()
 export class DeckService {
-    deck: Card[] =[ new Card("1c","Bebes un trago") ];
-    private currentCardIndex = 0;
+    deck: Card[] = [ 
+                    new Card("1c","Bebes un trago"),
+                    new Card("1d","Bebes un trago"),
+                    new Card("1p","Bebes un trago")
+                   ];
+    currentCardIndex = 0;
 
     currentCard():Card{
         return this.deck[this.currentCardIndex];

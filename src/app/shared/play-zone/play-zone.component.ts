@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { DeckService } from '../../services/deck.service';
+import { PlayerService } from '../../services/player.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { DeckService } from '../../services/deck.service';
 })
 export class PlayZoneComponent implements OnInit {
 
-  constructor(private deckService:DeckService) { }
+  constructor(private deckService:DeckService, private playerService:PlayerService) { }
 
   ngOnInit() {
   }

@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">¡Turno de {{this.player}}!</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-xs-6">
+                    <img [src]="this.img" class="img-responsive">
+                </div>
+                <div class="col-xs-6">
+                    <div [ngSwitch]="this.length - this.current">
+                        <span *ngSwitchCase="0">
+                            No quedan cartas en la baraja.
+                            <br><br>
+                            <button type="button" class="btn btn-primary">
+                                <span class="glyphicon glyphicon-repeat"></span> 
+                                Jugar otra vez
+                            </button>
+                        </span>
+                        <span *ngSwitchCase="1">
+                            <p>Queda 1 carta en la baraja.</p>
+                            <p>El siguiente jugador en levantar carta es {{this.nextPlayer}}.</p>
+                            <br>
+                            <button type="button" class="btn btn-primary">
+                                Siguiente turno
+                            </button>
+                        </span>
+                        <span *ngSwitchDefault>
+                            <p>Quedan {{this.length - this.current}} 
+                            cartas en la baraja.</p>
+                            <p>El siguiente jugador en levantar carta es {{this.nextPlayer}}.</p>
+                            <br>
+                            <button type="button" class="btn btn-primary">
+                                Siguiente turno
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

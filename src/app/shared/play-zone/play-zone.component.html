@@ -1,3 +1,8 @@
 <div class="container">
-  <img [src]="this.deckService.currentCard().path" class="img-thumbnail">
+  <deck [img]="this.deckService.currentCard().path" 
+        [length]="this.deckService.deck.length" 
+        [current]="this.deckService.currentCardIndex + 1"
+        [player]="this.playerService.currentPlayerName()"
+        [nextPlayer]="this.playerService.nextPlayerName()">
+  </deck>
 </div>

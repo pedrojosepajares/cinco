@@ -17,4 +17,11 @@ import { Injectable } from '@angular/core';
         else
             return "No players";
      }
+
+     nextPlayerName():string{
+         if (this.players.length > 0)
+            return this.players[(this.currentPlayer + 1) % this.players.length];
+        else
+            return "No players";
+     }
  }
