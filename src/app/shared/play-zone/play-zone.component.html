@@ -5,4 +5,5 @@
         [player]="this.playerService.currentPlayerName()"
         [nextPlayer]="this.playerService.nextPlayerName()">
   </deck>
+  <proof [text]="this.deckService.currentCard().text"></proof>
 </div>
