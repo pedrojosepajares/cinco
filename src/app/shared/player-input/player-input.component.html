@@ -11,14 +11,16 @@
         </div>
       </ul>
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Nuevo jugador">
+        <input type="text" class="form-control" placeholder="Nuevo jugador" #nameInput>
         <span class="input-group-btn">
-          <button class="btn btn-primary" type="button">
+          <button class="btn btn-primary" type="button" (click)=addPlayer(nameInput)>
             <span class="glyphicon glyphicon-plus"></span>
           </button>
         </span>
       </div>
     </div>
   </div>
-  <button [disabled]="this.playerService.players.length < 2" type="button" class="btn btn-primary btn-block">¡Empezar a jugar!</button>
+  <button [disabled]="this.playerService.players.length < 2" type="button" class="btn btn-primary btn-block">
+    ¡Empezar a jugar!
+  </button>
 </div>

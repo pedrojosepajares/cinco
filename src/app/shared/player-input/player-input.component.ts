@@ -8,5 +8,11 @@ import { PlayerService } from '../../services/player.service';
   styleUrls: ['./player-input.component.css']
 })
 export class PlayerInputComponent{
+  
   constructor(private playerService: PlayerService) {}
+
+  addPlayer(nameInput:any):void{
+    this.playerService.players.push(nameInput.value);
+    nameInput.value = "";
+  }
 }
