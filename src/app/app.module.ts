@@ -13,6 +13,8 @@ import { PlayZoneComponent } from './shared/play-zone/play-zone.component';
 import { DeckComponent } from './shared/deck/deck.component';
 import { ProofComponent } from './shared/proof/proof.component';
 
+import { routes } from './app.router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { ProofComponent } from './shared/proof/proof.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routes
   ],
   providers: [
     DeckService,
