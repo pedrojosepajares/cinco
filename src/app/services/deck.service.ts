@@ -22,7 +22,28 @@ export class DeckService {
                    ];
     currentCardIndex = 0;
 
+    constructor(){
+        this.shuffle();
+    }
+
+    private shuffle():void{
+        for (let i = this.deck.length; i; i--) {
+          let j = Math.floor(Math.random() * i);
+          [this.deck[i - 1], this.deck[j]] = [this.deck[j], this.deck[i - 1]];
+        }
+    }
+
+
     currentCard():Card{
         return this.deck[this.currentCardIndex];
+    }
+
+    nextCard():void{
+        this.currentCardIndex++;
+    }
+
+    reset():void{
+        this.currentCardIndex = 0;
+        this.shuffle();
     }
 }

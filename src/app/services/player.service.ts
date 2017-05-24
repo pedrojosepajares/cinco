@@ -5,10 +5,9 @@ import { Injectable } from '@angular/core';
      players: string[] = ["Manuel", "Antonio", "Jose Luis", "Miguel"];
      currentPlayer: number = 0;
 
-     nextPlayer():number{
+     nextPlayer():void{
          if (this.players.length > 0)
             this.currentPlayer = (this.currentPlayer + 1) % this.players.length;
-         return this.currentPlayer;   
      }
 
      currentPlayerName():string{
@@ -23,5 +22,9 @@ import { Injectable } from '@angular/core';
             return this.players[(this.currentPlayer + 1) % this.players.length];
         else
             return "No players";
+     }
+
+     reset():void{
+         this.currentPlayer = 0;
      }
  }

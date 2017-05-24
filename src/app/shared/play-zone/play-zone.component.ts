@@ -20,4 +20,14 @@ export class PlayZoneComponent implements OnInit {
       this.router.navigate(['']);
   }
 
+  nextTurn():void{
+    this.deckService.nextCard();
+    this.playerService.nextPlayer();
+  }
+
+  resetGame():void{
+    this.deckService.reset();
+    this.playerService.reset();
+  }
+
 }

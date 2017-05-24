@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'deck',
@@ -12,7 +12,8 @@ export class DeckComponent{
   @Input() public current:number
   @Input() public player:string
   @Input() public nextPlayer:string
-
+  @Output() public nextCard = new EventEmitter()
+  @Output() public newGame = new EventEmitter()
 
 
   constructor() { }

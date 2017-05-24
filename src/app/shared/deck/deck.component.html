@@ -9,9 +9,9 @@
                 <div class="col-xs-6">
                     <div [ngSwitch]="this.length - this.current">
                         <span *ngSwitchCase="0">
-                            No quedan cartas en la baraja.
-                            <br><br>
-                            <button type="button" class="btn btn-primary">
+                            <p>No quedan cartas en la baraja.</p>
+                            <br>
+                            <button type="button" class="btn btn-primary" (click)="this.newGame.emit()">
                                 <span class="glyphicon glyphicon-repeat"></span> 
                                 Jugar otra vez
                             </button>
@@ -20,7 +20,7 @@
                             <p>Queda 1 carta en la baraja.</p>
                             <p>El siguiente jugador en levantar carta es {{this.nextPlayer}}.</p>
                             <br>
-                            <button type="button" class="btn btn-primary">
+                            <button type="button" class="btn btn-primary" (click)="this.nextCard.emit()">
                                 Siguiente turno
                             </button>
                         </span>
@@ -29,7 +29,7 @@
                             cartas en la baraja.</p>
                             <p>El siguiente jugador en levantar carta es {{this.nextPlayer}}.</p>
                             <br>
-                            <button type="button" class="btn btn-primary">
+                            <button type="button" class="btn btn-primary" (click)="this.nextCard.emit()">
                                 Siguiente turno
                             </button>
                         </span>

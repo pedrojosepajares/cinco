@@ -3,7 +3,9 @@
         [length]="this.deckService.deck.length" 
         [current]="this.deckService.currentCardIndex + 1"
         [player]="this.playerService.currentPlayerName()"
-        [nextPlayer]="this.playerService.nextPlayerName()">
+        [nextPlayer]="this.playerService.nextPlayerName()"
+        (nextCard)="this.nextTurn()"
+        (newGame)="this.resetGame()">
   </deck>
   <proof [text]="this.deckService.currentCard().text"></proof>
 </div>
