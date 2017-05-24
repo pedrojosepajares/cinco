@@ -20,7 +20,7 @@
       </div>
     </div>
   </div>
-  <button [disabled]="this.playerService.players.length < 2" type="button" class="btn btn-primary btn-block">
+  <button routerLink="/play" [disabled]="this.playerService.players.length < 2" type="button" class="btn btn-primary btn-block">
     ¡Empezar a jugar!
   </button>
 </div>

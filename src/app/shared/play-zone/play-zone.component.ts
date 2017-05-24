@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { DeckService } from '../../services/deck.service';
 import { PlayerService } from '../../services/player.service';
 
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'play-zone',
@@ -11,9 +12,12 @@ import { PlayerService } from '../../services/player.service';
 })
 export class PlayZoneComponent implements OnInit {
 
-  constructor(private deckService:DeckService, private playerService:PlayerService) { }
+  constructor(private deckService:DeckService, private playerService:PlayerService,
+              private router:Router) { }
 
   ngOnInit() {
+    if (this.playerService.players.length == 0)
+      this.router.navigate(['']);
   }
 
 }
