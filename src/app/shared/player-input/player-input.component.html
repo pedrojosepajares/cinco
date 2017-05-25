@@ -13,12 +13,6 @@
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Nuevo jugador" #nameInput 
         [(ngModel)]="name" #ctrl="ngModel" required >
-
-        {{name}}
-        <br>
-        {{ctrl.valid}}
-
-
         <span class="input-group-btn">
           <button class="btn btn-primary" type="button" (click)=addPlayer(nameInput)>
             <span class="glyphicon glyphicon-plus"></span>

@@ -12,7 +12,9 @@ export class PlayerInputComponent{
   constructor(private playerService: PlayerService) {}
 
   addPlayer(nameInput:any):void{
-    this.playerService.players.push(nameInput.value);
-    nameInput.value = "";
+    if (nameInput.value != "" && nameInput.value.charAt(0) != " "){
+      this.playerService.players.push(nameInput.value);
+      nameInput.value = "";
+    }
   }
 }
