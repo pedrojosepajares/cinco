@@ -15,14 +15,34 @@ export class Card{
 
 @Injectable()
 export class DeckService {
-    deck: Card[] = [ 
-                    new Card("1c","Bebes un trago"),
-                    new Card("1d","Bebes un trago"),
-                    new Card("1p","Bebes un trago")
-                   ];
+    deck: Card[] = [];
     currentCardIndex = 0;
 
     constructor(){
+
+        var cardTexts:string[] = [
+        "Bebes 1 trago",
+        "Bebes 2 tragos",
+        "Mandas 1 trago",
+        "Mandas 2 tragos",
+        "Qué se hace, Cómo se hace, Dónde se hace",
+        "Juega al juego de los Números",
+        "Pon una norma o una prohibición",
+        "Todos riman",
+        "Mandas 3 tragos",
+          "Juego del Dedo",
+        "Elige tu puta",
+        "Bebe un chupito",
+        "Todos beben un trago",
+        ]
+
+        var cardSuits:string[] = ["c", "p", "t", "d"];
+
+        for (let textType = 0; textType < cardTexts.length; textType++){
+            for (let suit = 0; suit < cardSuits.length; suit++){
+                this.deck.push(new Card(textType+1 + cardSuits[suit], cardTexts[textType]));
+            }
+        }
         this.shuffle();
     }
 

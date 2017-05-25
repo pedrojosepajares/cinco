@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
  @Injectable()
  export class PlayerService{
-     players: string[] = ["Manuel", "Antonio", "Jose Luis", "Miguel"];
+     players: string[] = [];
      currentPlayer: number = 0;
 
      nextPlayer():void{
