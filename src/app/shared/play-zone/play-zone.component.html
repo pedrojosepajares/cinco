@@ -1,11 +1,11 @@
 <div class="container">
-  <deck [img]="this.deckService.currentCard().path" 
-        [length]="this.deckService.deck.length" 
-        [current]="this.deckService.currentCardIndex + 1"
+  <deck [img]="this.deck.currentCard().imgPath" 
+        [length]="this.deck.length" 
+        [current]="this.deck.drawnCards()"
         [player]="this.playerService.currentPlayerName()"
         [nextPlayer]="this.playerService.nextPlayerName()"
         (nextCard)="this.nextTurn()"
         (newGame)="this.resetGame()">
   </deck>
-  <proof [text]="this.deckService.currentCard().text"></proof>
+  <proof [text]="this.deck.currentCard().text"></proof>
 </div>

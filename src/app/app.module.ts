@@ -10,8 +10,8 @@ import { PlayerService } from './services/player.service';
 
 import { PlayerInputComponent } from './shared/player-input/player-input.component';
 import { PlayZoneComponent } from './shared/play-zone/play-zone.component';
-import { DeckComponent } from './shared/deck/deck.component';
-import { ProofComponent } from './shared/proof/proof.component';
+import { DeckComponent } from './shared/deck-zone/deck.component';
+import { ProofComponent } from './shared/proof-zone/proof.component';
 
 import { routes } from './app.router';
 
