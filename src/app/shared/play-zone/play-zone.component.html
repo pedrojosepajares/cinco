@@ -1,4 +1,5 @@
 <div class="container">
+  <proof [text]="this.deck.currentCard().text"></proof>
   <deck [img]="this.deck.currentCard().imgPath" 
         [length]="this.deck.length" 
         [current]="this.deck.drawnCards()"
@@ -7,5 +8,4 @@
         (nextCard)="this.nextTurn()"
         (newGame)="this.resetGame()">
   </deck>
-  <proof [text]="this.deck.currentCard().text"></proof>
 </div>
