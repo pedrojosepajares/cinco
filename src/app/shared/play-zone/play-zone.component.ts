@@ -21,7 +21,6 @@ export class PlayZoneComponent implements OnInit {
   }
 
   ngOnInit() {
-    debugger;
     if (this.playerService.players.length == 0)
       this.router.navigate(['']);
 
