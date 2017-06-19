@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
 export class DeckService {
     deck: Card[] = [];
     currentCardIndex = 0;
-    apiUrl = "http://127.0.0.1:3000/decks";
+    apiUrl = "http://server:3000/decks";
 
     constructor(private http: Http){}
 
