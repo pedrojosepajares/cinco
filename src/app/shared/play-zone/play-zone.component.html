@@ -1,7 +1,7 @@
 <div class="container">
   <deck [img]="this.deck.currentCard().imgPath | async" 
-        [length]="this.deck.length" 
-        [current]="this.deck.drawnCards()"
+        [length]="this.deck.length | async" 
+        [current]="this.deck.drawnCards() | async"
         [player]="this.playerService.currentPlayerName()"
         [nextPlayer]="this.playerService.nextPlayerName()"
         (nextCard)="this.nextTurn()"
