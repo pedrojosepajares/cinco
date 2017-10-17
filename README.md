@@ -4,14 +4,14 @@ Juego de cartas cuyo objetivo es amenizar fiestas y eventos.
 ## Prerrequisitos e instalación
 El sistema puede correr en cualquier distribución Linux. Las siguientes instrucciones se corresponden con la preparación para arrancar la aplicación en un sistema Ubuntu.
 
-1. Es necesario tener instalado y escuchando peticiones el servidor [cinco-server] (https://github.com/pedrojosepajares/cinco-server)
+1. Es necesario tener instalado y escuchando peticiones el servidor [cinco-server](https://github.com/pedrojosepajares/cinco-server)
 
-2. Instalación de [NodeJS] (https://nodejs.org/en/)
+2. Instalación de [NodeJS](https://nodejs.org/en/)
 	```sh
 	apt-get install -y curl && curl -sL https://deb.nodesource.com/setup_6.x | bash -
     apt-get install -y nodejs
 	```
-3. Instalación del framework [Angular2] (https://angular.io/) y  [Angular CLI] (https://cli.angular.io/)
+3. Instalación del framework [Angular2] (https://angular.io/) y  [Angular CLI](https://cli.angular.io/)
 	```sh
     npm install -g @angular/cli@latest
 	```
