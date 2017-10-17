@@ -1,28 +1,37 @@
 # Cinco
+Juego de cartas cuyo objetivo es amenizar fiestas y eventos.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
+## Prerrequisitos e instalación
+El sistema puede correr en cualquier distribución Linux. Las siguientes instrucciones se corresponden con la preparación para arrancar la aplicación en un sistema Ubuntu.
 
-## Development server
+1. Es necesario tener instalado y escuchando peticiones el servidor [cinco-server] (https://github.com/pedrojosepajares/cinco-server)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+2. Instalación de [NodeJS] (https://nodejs.org/en/)
+	```sh
+	apt-get install -y curl && curl -sL https://deb.nodesource.com/setup_6.x | bash -
+    apt-get install -y nodejs
+	```
+3. Instalación del framework [Angular2] (https://angular.io/) y  [Angular CLI] (https://cli.angular.io/)
+	```sh
+    npm install -g @angular/cli@latest
+	```
+4. Instalar el resto de paquetes necesarios en el directorio de la aplicación
+	```sh
+    cd cinco
+    npm install
+	```
 
-## Code scaffolding
+## Ejecutando la aplicación
+Sólo queda ejecutar el cliente desde su directorio
+	```sh
+    ng serve
+	```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+## Tecnologías
+* [TypeScript](https://www.typescriptlang.org/)
+* [NodeJS](https://nodejs.org/en/)
+* [Angular2](https://angular.io/)
+* [Angular CLI](https://cli.angular.io/)
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Autores
+* Pedro José Pajares Ramírez
