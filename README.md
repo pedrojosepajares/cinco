@@ -24,8 +24,7 @@ El sistema puede correr en cualquier distribución Linux. Las siguientes instruc
 ## Ejecutando la aplicación
 Sólo queda ejecutar el cliente desde su directorio
 ```sh
-cd cinco
-npm install
+ng serve
 ```
 
 
