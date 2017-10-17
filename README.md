@@ -11,7 +11,7 @@ El sistema puede correr en cualquier distribución Linux. Las siguientes instruc
 	apt-get install -y curl && curl -sL https://deb.nodesource.com/setup_6.x | bash -
     apt-get install -y nodejs
 	```
-3. Instalación del framework [Angular2] (https://angular.io/) y  [Angular CLI](https://cli.angular.io/)
+3. Instalación del framework [Angular2](https://angular.io/) y  [Angular CLI](https://cli.angular.io/)
 	```sh
     npm install -g @angular/cli@latest
 	```
