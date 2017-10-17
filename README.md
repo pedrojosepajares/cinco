@@ -23,10 +23,11 @@ El sistema puede correr en cualquier distribución Linux. Las siguientes instruc
 
 ## Ejecutando la aplicación
 Sólo queda ejecutar el cliente desde su directorio
+```sh
+cd cinco
+npm install
+```
 
-	```sh
-    ng serve
-	```
 
 ## Tecnologías
 * [TypeScript](https://www.typescriptlang.org/)
